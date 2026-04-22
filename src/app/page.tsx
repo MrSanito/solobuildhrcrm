@@ -8,6 +8,8 @@ import ResumeScreening from "./ResumeScreening";
 import Hiring from "./Hiring";
 import People from "./People";
 import Work from "./Work";
+import Compliance from "./Compliance";
+import Finance from "./Finance";
 
 type Page =
   | "dashboard"
@@ -21,6 +23,8 @@ type Page =
   | "source-analytics"
   | "talent-pool"
   | "reports-diagnostics"
+  | "compliance"
+  | "finance"
   | string;
 
 export default function App() {
@@ -51,6 +55,12 @@ export default function App() {
     }
     if (currentPage === "work") {
       return <Work />;
+    }
+    if (currentPage === "compliance") {
+      return <Compliance />;
+    }
+    if (currentPage === "finance") {
+      return <Finance />;
     }
 
     // List of recruitment-related sub-pages
@@ -87,10 +97,6 @@ export default function App() {
 
   return (
     <>
-      <div className="fixed top-0 left-0 right-0 z-[9999] bg-yellow-400 text-black text-[10px] py-0.5 px-4 font-mono font-bold flex justify-between">
-        <span>DEBUG STATE: currentPage = "{currentPage}"</span>
-        <button onClick={() => setCurrentPage("resumescreening")} className="underline ml-4">FORCE RESUMESCREENING</button>
-      </div>
       <SidebarLayout currentPage={currentPage} onNavigate={setCurrentPage}>
         {renderPage()}
       </SidebarLayout>
