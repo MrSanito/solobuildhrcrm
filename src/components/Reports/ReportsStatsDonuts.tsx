@@ -54,7 +54,7 @@ export default function ReportsStatsDonuts() {
             </defs>
             <XAxis dataKey="month" tick={{ fontSize: 9 }} tickLine={false} axisLine={false} />
             <YAxis tick={{ fontSize: 9 }} tickLine={false} axisLine={false} />
-            <Tooltip contentStyle={{ fontSize: 10 }} />
+            <Tooltip contentStyle={{ fontSize: 10 }} wrapperStyle={{ zIndex: 1000 }} allowEscapeViewBox={{ x: true, y: true }} />
             <Area type="monotone" dataKey="count" stroke="#6366f1" strokeWidth={2} fill="url(#genGrad)" dot={{ r: 3, fill: "#6366f1" }} />
           </AreaChart>
         </ResponsiveContainer>

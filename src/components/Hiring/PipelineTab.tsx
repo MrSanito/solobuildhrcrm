@@ -257,7 +257,7 @@ export function PipelineTab() {
             <ResponsiveContainer width="100%" height={60}>
               <LineChart data={conversionData}>
                 <Line type="monotone" dataKey="value" stroke="#6366f1" strokeWidth={2} dot={{ r: 2, fill: "#6366f1" }} />
-                <Tooltip contentStyle={{ fontSize: 9 }} formatter={(v: any) => [`${v}%`]} />
+                <Tooltip contentStyle={{ fontSize: 9 }} formatter={(v: any) => [`${v}%`]} wrapperStyle={{ zIndex: 1000 }} allowEscapeViewBox={{ x: true, y: true }} />
               </LineChart>
             </ResponsiveContainer>
             <div className="flex justify-between text-[9px] text-gray-400 mt-0.5">

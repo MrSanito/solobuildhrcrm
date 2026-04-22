@@ -33,7 +33,7 @@ export default function PerformanceCostCharts() {
             <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
             <XAxis dataKey="month" tick={{ fontSize: 10 }} axisLine={false} tickLine={false} />
             <YAxis tick={{ fontSize: 10 }} axisLine={false} tickLine={false} />
-            <Tooltip contentStyle={{ fontSize: 11, borderRadius: 8 }} />
+            <Tooltip contentStyle={{ fontSize: 11, borderRadius: 8 }} wrapperStyle={{ zIndex: 1000 }} allowEscapeViewBox={{ x: true, y: true }} />
             <Line type="monotone" dataKey="high" stroke="#22c55e" strokeWidth={2} dot={false} name="High Performers" />
             <Line type="monotone" dataKey="track" stroke="#3b82f6" strokeWidth={2} dot={false} name="On Track" />
             <Line type="monotone" dataKey="needs" stroke="#f59e0b" strokeWidth={2} dot={false} name="Needs Improvement" />
@@ -73,7 +73,7 @@ export default function PerformanceCostCharts() {
             <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
             <XAxis dataKey="month" tick={{ fontSize: 10 }} axisLine={false} tickLine={false} />
             <YAxis tick={{ fontSize: 10 }} axisLine={false} tickLine={false} />
-            <Tooltip contentStyle={{ fontSize: 11, borderRadius: 8 }} />
+            <Tooltip contentStyle={{ fontSize: 11, borderRadius: 8 }} wrapperStyle={{ zIndex: 1000 }} allowEscapeViewBox={{ x: true, y: true }} />
             <Line type="monotone" dataKey="cost" stroke="#6366f1" strokeWidth={2} dot={{ r: 3 }} name="Total Cost (₹ Cr)" />
             <Line type="monotone" dataKey="output" stroke="#22c55e" strokeWidth={2} dot={{ r: 3 }} name="Output Index" />
           </LineChart>

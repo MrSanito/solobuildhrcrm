@@ -41,6 +41,8 @@ export default function FinanceCharts() {
               <Tooltip 
                 contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 10px 15px -3px rgba(0,0,0,0.1)' }}
                 formatter={(v: any) => [formatCurrency(Number(v)), ""]}
+                wrapperStyle={{ zIndex: 1000 }} 
+                allowEscapeViewBox={{ x: true, y: true }}
               />
               <Area type="monotone" dataKey="amount" stroke="#6366f1" strokeWidth={3} fillOpacity={1} fill="url(#colorAmt)" />
               <Area type="monotone" dataKey="tax" stroke="#f59e0b" strokeWidth={3} fill="transparent" />
@@ -78,7 +80,7 @@ export default function FinanceCharts() {
                   <Cell key={`cell-${index}`} fill={entry.color} />
                 ))}
               </Pie>
-              <Tooltip formatter={(v: any) => formatCurrency(Number(v))} />
+              <Tooltip formatter={(v: any) => formatCurrency(Number(v))} wrapperStyle={{ zIndex: 1000 }} allowEscapeViewBox={{ x: true, y: true }} />
             </PieChart>
           </ResponsiveContainer>
           <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">

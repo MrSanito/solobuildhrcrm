@@ -191,7 +191,9 @@ export function LifecycleTab() {
                 <XAxis dataKey="month" tick={{ fontSize: 10, fill: "#9ca3af" }} tickLine={false} axisLine={false} />
                 <YAxis tick={{ fontSize: 10, fill: "#9ca3af" }} tickLine={false} axisLine={false} />
                 <Tooltip
-                  contentStyle={{ fontSize: 11, borderRadius: 8, border: "1px solid #e5e7eb", boxShadow: "0 4px 12px rgba(0,0,0,0.08)" }}
+                  contentStyle={{ fontSize: 10, borderRadius: 8, border: "none", boxShadow: "0 4px 6px -1px rgb(0 0 0 / 0.1)" }}
+                  wrapperStyle={{ zIndex: 1000 }}
+                  allowEscapeViewBox={{ x: true, y: true }}
                 />
                 <Line type="monotone" dataKey="active"     stroke="#60a5fa" strokeWidth={2} dot={{ r: 3, fill: "#60a5fa" }} name="Active Employees" />
                 <Line type="monotone" dataKey="onboarding" stroke="#34d399" strokeWidth={2} dot={{ r: 3, fill: "#34d399" }} name="New Hires" />

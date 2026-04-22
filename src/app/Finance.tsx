@@ -464,7 +464,7 @@ export default function FinancePage() {
                 <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
                 <XAxis dataKey="category" tick={{ fontSize: 9 }} tickLine={false} axisLine={false} />
                 <YAxis tick={{ fontSize: 9 }} tickLine={false} axisLine={false} tickFormatter={(v) => `${(v/100000).toFixed(0)}L`} />
-                <Tooltip content={<CustomBudgetTooltip />} />
+                <Tooltip content={<CustomBudgetTooltip />} wrapperStyle={{ zIndex: 1000 }} allowEscapeViewBox={{ x: true, y: true }} />
                 <Bar dataKey="budget" name="Budget" fill="#e0e7ff" radius={[2,2,0,0]} />
                 <Bar dataKey="actual" name="Actual" fill="#6366f1" radius={[2,2,0,0]} />
                 {/* Variance labels */}
@@ -515,7 +515,7 @@ export default function FinancePage() {
                 <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
                 <XAxis dataKey="date" tick={{ fontSize: 9 }} tickLine={false} axisLine={false} />
                 <YAxis tick={{ fontSize: 9 }} tickLine={false} axisLine={false} tickFormatter={(v) => `${(v/100000).toFixed(0)}L`} />
-                <Tooltip contentStyle={{ fontSize: 10 }} formatter={(v: any) => [`₹${(v/100000).toFixed(1)}L`]} />
+                <Tooltip contentStyle={{ fontSize: 10 }} formatter={(v: any) => [`₹${(v/100000).toFixed(1)}L`]} wrapperStyle={{ zIndex: 1000 }} allowEscapeViewBox={{ x: true, y: true }} />
                 <Line type="monotone" dataKey="inflow" name="Inflow" stroke="#22c55e" strokeWidth={2} dot={{ r: 2 }} />
                 <Line type="monotone" dataKey="outflow" name="Outflow" stroke="#ef4444" strokeWidth={2} dot={{ r: 2 }} />
                 <Line type="monotone" dataKey="balance" name="Balance" stroke="#6366f1" strokeWidth={2} strokeDasharray="4 2" dot={{ r: 2 }} />

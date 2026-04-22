@@ -57,7 +57,7 @@ export default function StatusCharts() {
             <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
             <XAxis dataKey="month" tick={{ fontSize: 10, fill: "#94a3b8" }} axisLine={false} tickLine={false} />
             <YAxis domain={[60, 100]} tick={{ fontSize: 10, fill: "#94a3b8" }} axisLine={false} tickLine={false} unit="%" />
-            <Tooltip contentStyle={{ fontSize: 11, borderRadius: 12, border: "1px solid #e2e8f0" }} formatter={(v: any) => [`${v}%`, "Score"]} />
+            <Tooltip contentStyle={{ fontSize: 11, borderRadius: 12, border: "1px solid #e2e8f0" }} formatter={(v: any) => [`${v}%`, "Score"]} wrapperStyle={{ zIndex: 1000 }} allowEscapeViewBox={{ x: true, y: true }} />
             <Line type="monotone" dataKey="score" stroke="#22c55e" strokeWidth={2.5}
               dot={{ r: 4, fill: "#22c55e", strokeWidth: 0 }}
               label={{ position: "top", fontSize: 10, fill: "#16a34a", fontWeight: 600 }} />

@@ -22,14 +22,26 @@ const spDown = [7,6,5,6,4,5,3,4,2,3].map(v=>({v}));
 const spFlat = [4,4,5,4,5,5,4,5,4,5].map(v=>({v}));
 
 function Spark({ data, color }: { data:{v:number}[]; color:string }) {
-  const vals = data.map(d=>d.v);
-  const mn=Math.min(...vals), mx=Math.max(...vals), rng=mx-mn||1;
-  const W=80, H=24;
-  const pts = vals.map((v,i)=>`${(i/(vals.length-1))*W},${H-((v-mn)/rng)*(H-4)-2}`).join(" ");
   return (
-    <svg viewBox={`0 0 ${W} ${H}`} className="w-20 h-6">
-      <polyline points={pts} fill="none" stroke={color} strokeWidth="1.5" strokeLinejoin="round" strokeLinecap="round"/>
-    </svg>
+    <div className="w-20 h-6">
+      <ResponsiveContainer width="100%" height="100%">
+        <LineChart data={data}>
+          <Line
+            type="monotone"
+            dataKey="v"
+            stroke={color}
+            strokeWidth={1.5}
+            dot={false}
+            isAnimationActive={false}
+          />
+          <Tooltip 
+            contentStyle={{ display: 'none' }} 
+            wrapperStyle={{ zIndex: 1000 }} 
+            allowEscapeViewBox={{ x: true, y: true }}
+          />
+        </LineChart>
+      </ResponsiveContainer>
+    </div>
   );
 }
 

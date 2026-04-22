@@ -29,7 +29,7 @@ export default function ReportsCharts() {
             </defs>
             <XAxis dataKey="date" tick={{ fontSize: 9 }} tickLine={false} axisLine={false} />
             <YAxis domain={[1100, 1300]} tick={{ fontSize: 9 }} tickLine={false} axisLine={false} />
-            <Tooltip contentStyle={{ fontSize: 10 }} />
+            <Tooltip contentStyle={{ fontSize: 10 }} wrapperStyle={{ zIndex: 1000 }} allowEscapeViewBox={{ x: true, y: true }} />
             <Area type="monotone" dataKey="value" stroke="#6366f1" strokeWidth={2} fill="url(#hcGrad)" dot={{ r: 2, fill: "#6366f1" }} />
           </AreaChart>
         </ResponsiveContainer>
@@ -48,7 +48,7 @@ export default function ReportsCharts() {
           <LineChart data={attritionTrend}>
             <XAxis dataKey="date" tick={{ fontSize: 9 }} tickLine={false} axisLine={false} />
             <YAxis domain={[8, 12]} tick={{ fontSize: 9 }} tickLine={false} axisLine={false} />
-            <Tooltip contentStyle={{ fontSize: 10 }} formatter={(v: any) => [`${v}%`]} />
+            <Tooltip contentStyle={{ fontSize: 10 }} formatter={(v: any) => [`${v}%`]} wrapperStyle={{ zIndex: 1000 }} allowEscapeViewBox={{ x: true, y: true }} />
             <Line type="monotone" dataKey="rate" stroke="#22c55e" strokeWidth={2} dot={{ r: 2, fill: "#22c55e" }} />
           </LineChart>
         </ResponsiveContainer>

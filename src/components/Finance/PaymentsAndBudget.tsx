@@ -60,7 +60,7 @@ export default function PaymentsAndBudget() {
                 tickLine={false} 
                 tick={{ fontSize: 11, fontWeight: 600, fill: '#64748b' }}
               />
-              <Tooltip cursor={{ fill: '#f8fafc' }} formatter={(v: any) => formatCurrency(Number(v))} />
+              <Tooltip cursor={{ fill: '#f8fafc' }} formatter={(v: any) => formatCurrency(Number(v))} wrapperStyle={{ zIndex: 1000 }} allowEscapeViewBox={{ x: true, y: true }} />
               <Bar dataKey="spent" fill="#6366f1" radius={[0, 4, 4, 0]} barSize={24} />
             </BarChart>
           </ResponsiveContainer>

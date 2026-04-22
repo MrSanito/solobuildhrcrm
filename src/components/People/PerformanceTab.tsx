@@ -91,6 +91,8 @@ export function PerformanceTab({ employees, selectedEmployee, onSelectEmployee, 
               <YAxis domain={[3,5.2]} tick={{fontSize:10,fill:"#9ca3af"}} axisLine={false} tickLine={false} />
               <Tooltip
                 contentStyle={{fontSize:11,padding:"4px 8px",borderRadius:"6px",border:"1px solid #e5e7eb"}}
+                wrapperStyle={{ zIndex: 1000 }}
+                allowEscapeViewBox={{ x: true, y: true }}
                 formatter={(v: any) => [v.toFixed(1),"Avg Score"]}
                 labelStyle={{color:"#6b7280"}}
               />
