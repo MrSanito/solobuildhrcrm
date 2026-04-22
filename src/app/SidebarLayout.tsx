@@ -21,6 +21,7 @@ const navItems = [
   { id: "people", label: "People", icon: Users },
   { id: "work", label: "Work", icon: Grid3x3 },
   { id: "finance", label: "Finance", icon: Wallet },
+  { id: "reports", label: "Reports", icon: BarChart2 },
   { id: "compliance", label: "Compliance", icon: Shield },
   { id: "control-center", label: "Control Center", icon: Sliders },
   { id: "system", label: "System", icon: Settings },

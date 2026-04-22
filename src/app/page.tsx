@@ -10,6 +10,8 @@ import People from "./People";
 import Work from "./Work";
 import Compliance from "./Compliance";
 import Finance from "./Finance";
+import Reports from "./Reports";
+import ControlCenter from "./ControlCenter";
 
 type Page =
   | "dashboard"
@@ -25,6 +27,7 @@ type Page =
   | "reports-diagnostics"
   | "compliance"
   | "finance"
+  | "reports"
   | string;
 
 export default function App() {
@@ -61,6 +64,12 @@ export default function App() {
     }
     if (currentPage === "finance") {
       return <Finance />;
+    }
+    if (currentPage === "reports") {
+      return <Reports />;
+    }
+    if (currentPage === "control-center") {
+      return <ControlCenter />;
     }
 
     // List of recruitment-related sub-pages
