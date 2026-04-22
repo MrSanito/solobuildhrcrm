@@ -108,7 +108,6 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             return (
               <SidebarMenuItem key={item.title}>
                 <SidebarMenuButton
-                  asChild
                   tooltip={item.title}
                   isActive={isActive}
                   onClick={() => setOpenMobile(false)}
@@ -116,18 +115,19 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                     data-[active=true]:bg-blue-700 data-[active=true]:text-white
                     data-[active=true]:shadow-md data-[active=true]:shadow-blue-900/40
                     group/menu-item"
-                >
-                  <Link href={item.url}>
-                    {item.icon && (
-                      <item.icon
-                        className="size-[18px] shrink-0 transition-colors duration-150 group-data-[active=true]:text-white"
-                      />
-                    )}
-                    <span className="font-medium text-sm whitespace-nowrap overflow-hidden truncate flex-1">
-                      {item.title}
-                    </span>
-                  </Link>
-                </SidebarMenuButton>
+                  render={
+                    <Link href={item.url}>
+                      {item.icon && (
+                        <item.icon
+                          className="size-[18px] shrink-0 transition-colors duration-150 group-data-[active=true]:text-white"
+                        />
+                      )}
+                      <span className="font-medium text-sm whitespace-nowrap overflow-hidden truncate flex-1">
+                        {item.title}
+                      </span>
+                    </Link>
+                  }
+                />
               </SidebarMenuItem>
             );
           })}

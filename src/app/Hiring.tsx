@@ -1160,7 +1160,7 @@ function PipelineTab() {
                   <div key={p.name} className="flex items-center gap-1.5">
                     <div className="w-2 h-2 rounded-full shrink-0" style={{ backgroundColor: p.color }} />
                     <span className="text-[10px] text-gray-600">{p.name}</span>
-                    <span className="text-[10px] font-semibold text-gray-700 ml-auto">{p.count} ({p.pct})</span>
+                    <span className="text-[10px] font-semibold text-gray-700 ml-auto">{p.value} ({p.pct})</span>
                   </div>
                 ))}
               </div>
